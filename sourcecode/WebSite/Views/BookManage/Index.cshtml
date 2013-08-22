@@ -1,0 +1,25 @@
+﻿@{
+	ViewBag.Title = "明源图书馆";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="form-search well">
+	<select id="queryType">
+		<option value="1">按书名</option>
+		<option value="2">按图书编号</option>
+		<option value="3">按ISBN</option>
+		<option value="4">按分类</option>
+	</select>
+	<div class="input-append input-prepend">
+		<input type="text" class="input-large"/>
+		<button class="btn">查找</button>
+	</div>
+	<div class="btn-group" style="margin-left: 50px;">
+		<button class="btn input-prepend">新增</button>
+		<button class="btn input-prepend">保存</button>
+	</div>
+</div>
+<div class="container">
+	这里只能查询未借出去的图书，查出来可以编辑，已借出的不让编辑。
+	新增图书。
+</div>

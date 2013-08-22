@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{2DEF04A8-1B95-4ECC-ACF8-542823B4531F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{4EA02104-9555-49A4-9D34-B060661DFFB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source code", "source code", "{0609452A-134A-425D-B60E-6CC592B4B441}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "WebSite\WebSite.csproj", "{1203E9BE-4720-4E77-81FE-EF5CD364FA00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Component", "Component\Component.csproj", "{10C20658-6EA2-4A37-B6D8-9B72F7F5958D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1203E9BE-4720-4E77-81FE-EF5CD364FA00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1203E9BE-4720-4E77-81FE-EF5CD364FA00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1203E9BE-4720-4E77-81FE-EF5CD364FA00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1203E9BE-4720-4E77-81FE-EF5CD364FA00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10C20658-6EA2-4A37-B6D8-9B72F7F5958D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10C20658-6EA2-4A37-B6D8-9B72F7F5958D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10C20658-6EA2-4A37-B6D8-9B72F7F5958D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10C20658-6EA2-4A37-B6D8-9B72F7F5958D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1203E9BE-4720-4E77-81FE-EF5CD364FA00} = {0609452A-134A-425D-B60E-6CC592B4B441}
+		{10C20658-6EA2-4A37-B6D8-9B72F7F5958D} = {0609452A-134A-425D-B60E-6CC592B4B441}
+	EndGlobalSection
+EndGlobal

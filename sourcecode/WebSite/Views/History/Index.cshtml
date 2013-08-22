@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "历史记录";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered">
+	<thead style="background: #eee">
+		<tr>
+			<th style="text-align: left;width: 150px">借阅日期</th>
+			<th style="text-align: left;width: 150px">应还日期</th>
+			<th>借阅图书</th>
+			<th style="text-align: left;width: 100px">操作</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td rowspan="2">2012-11-20</td>
+			<td rowspan="2">2012-12-22</td>
+			<td>Javascript高级程序设计</td>
+			<td>续借</td>
+		</tr>
+		<tr>
+			<td>Javascript高级程序设计1212</td>
+			<td>续借</td>
+		</tr>
+		<tr>
+			<td>2012-11-20</td>
+			<td>2012-11-20</td>
+			<td>Javascript高级程序设计1212</td>
+			<td>续借</td>
+		</tr>
+	</tbody>
+</table>
