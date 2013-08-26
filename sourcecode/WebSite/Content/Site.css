@@ -20,6 +20,10 @@ body > .navbar .brand:hover {
   -text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
 }
 
+/* Change the font-size */
+.container .nav-collapse input[type="text"], 
+.container .nav-collapse input[type="submit"] { font-size: 12px;}
+
 .body-placeholder{top: 60px;position: relative;margin-bottom: 60px;}
 .subnavbar-fixed{top: 41px;}
 
@@ -44,12 +48,13 @@ body > .navbar .brand:hover {
 table.simple-table{ border: none;padding: 0; }
 .simple-table td{ border: none;border-spacing: 0;padding: 2px 2px 2px 0;}
 	
-.bookitem{ border-bottom: 1px dashed #ddd;margin: 10px 10px 30px 10px;padding: 10px 0 30px 0;}
+.bookitem{ border-bottom: 1px dashed #ddd;margin: 0px 10px 30px 0px;padding: 10px 0 30px 0;}
 .bookitem .span2{ height: 150px;margin: 0 20px 0 20px;}
-.bookitem-title{ border-bottom: 1px dashed #ddd;padding: 0 10px 5px 10px;margin-top: 20px;width: 80%;overflow: hidden;}
+.bookitem-title{ border-bottom: 1px dashed #ddd;padding: 0 10px 5px 10px;margin-top: 0px;width: 80%;overflow: hidden;}
 .bookitem-content{padding: 10px;width: 100%;}
-.bookitem-img{ padding: 0 15px 15px 0;}
-
+.bookitem-right{ margin-left: 20px;}
+.row-fluid .offset05 {margin-left: 5.638297872340425%;}
+  
 /* Home/Index.cshtml End */
 
 .table input[type="checkbox"]{ margin-top: -1px;}

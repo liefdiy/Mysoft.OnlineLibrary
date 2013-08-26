@@ -49,6 +49,7 @@
     <Compile Include="Attributes\AuthAttribute.cs" />
     <Compile Include="Attributes\DataValidateAttribute.cs" />
     <Compile Include="Config\AppConfiguration.cs" />
+    <Compile Include="Extensions\ConvertExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

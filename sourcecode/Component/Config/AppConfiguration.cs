@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Mysoft.Platform.Component.Config
 {
@@ -9,7 +6,7 @@ namespace Mysoft.Platform.Component.Config
 	{
 		public static string AuthorizedFailedRedirectUrl
 		{
-			get { return "~/Error.aspx"; }
+			get { return "~/Error/Index"; }
 		}
 
 		public static string LoginRedirectUrl

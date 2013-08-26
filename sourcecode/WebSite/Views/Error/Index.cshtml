@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Error.cshtml";
+}
+
+
+<label class="label-warning">
+	Maybe you have no permission.
+</label>
+
+<script type="text/javascript">
+	function goBack() {
+		location.href = "/";
+	}
+
+	window.setInterval(goBack, 1500);
+</script>

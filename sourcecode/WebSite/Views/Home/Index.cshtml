@@ -1,106 +1,65 @@
-﻿@{
+﻿@model IEnumerable<Mysoft.Platform.OnlineLibrary.Models.BookModel>
+
+@{
 	ViewBag.Title = "明源图书馆";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<script type="text/javascript">
+	var pageIndex = 1;
+
+	function getMore() {
+		pageIndex++;
+		alert(pageIndex);
+	}
+
+	$(function () {
+		$("#loadMore").on('click', getMore);
+	});
+</script>
 
 <div class="container">
 	<div class="row">
 		<!-- tags -->
 	</div>
 	
-	<div class="row-fluid bookitem">
-		<div class="span12">
-			<div class="span3 bookitem-img">
-				<img class="img-polaroid img-rounded" src="@Url.Content("~/Content/bootstrap/img/glyphicons-halflings.png")" alt="封面" />
-			</div>
-			<div class="span9">
-				<a href="#">高性能网站建设指南 译著</a>
-				@*<div class="bookitem-title"><a href="#">高性能网站建设指南 译著</a></div>*@
-				<div class="row-fluid bookitem-content">
-					<div class="span9">
-						<table class="simple-table">
-							<tr><td>作者：</td><td>桑德斯</td></tr>
-							<tr><td>出版社：</td><td>电子工业出版社</td></tr>
-							<tr><td>ISBN：</td><td>N</td></tr>
-							<tr><td>图书编号：</td><td>YH-213124</td></tr>
-							<tr><td>分类：</td><td><a href="#">Web</a>, <a href="#">JS</a></td></tr>
-							<tr><td>在馆：</td><td>1本</td></tr>
-						</table>
+	@if( Model != null )
+	{
+		foreach (var m in Model)
+		{
+			<div class="row-fluid bookitem">
+				<div class="span12">
+					<div class="span3">
+						<img class="img-polaroid img-rounded" src="@Url.Content("~/Content/bootstrap/img/glyphicons-halflings.png")" alt="封面" />
+					</div>
+					<div class="span8 offset05">
+						<div class="bookitem-title"><a href="@Url.Action("Detail")/@m.BookId">@m.BookName</a></div>
+						<div class="row-fluid bookitem-content">
+							<div class="span9">
+								<table class="simple-table">
+									<tr><td>作者：</td><td>@m.Author</td></tr>
+									<tr><td>出版社：</td><td>@m.Press</td></tr>
+									<tr><td>ISBN：</td><td>@m.ISBN</td></tr>
+									<tr><td>图书编号：</td><td>@m.BookSerialNo</td></tr>
+									@if(!Request.Path.Contains(@Url.Action("Category", "Home", new { categoryId = "" })))
+									{
+										<tr><td>分类：</td><td><a  href="@Url.Action("Category", "Home", new { categoryId = "" })/@m.CategoryId">@m.CategoryName</a></td></tr>
+									}
+									else
+									{
+										<tr><td>分类：</td><td><a  href="#">@m.CategoryName</a></td></tr>		 
+									}
+									<tr><td>在馆：</td><td>@m.In 本</td></tr>
+								</table>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	
-	<div class="row-fluid bookitem">
-		<div class="span12">
-			<div class="span3 bookitem-img">
-				<img class="img-polaroid img-rounded" src="@Url.Content("~/Content/bootstrap/img/glyphicons-halflings.png")" alt="封面" />
-			</div>
-			<div class="span9">
-				<a href="#">高性能网站建设指南 译著</a>
-				@*<div class="bookitem-title"><a href="#">高性能网站建设指南 译著</a></div>*@
-				<div class="row-fluid bookitem-content">
-					<div class="span9">
-						<table class="simple-table">
-							<tr><td>作者：</td><td>桑德斯</td></tr>
-							<tr><td>出版社：</td><td>电子工业出版社</td></tr>
-							<tr><td>ISBN：</td><td>N</td></tr>
-							<tr><td>图书编号：</td><td>YH-213124</td></tr>
-							<tr><td>分类：</td><td><a href="#">Web</a>, <a href="#">JS</a></td></tr>
-							<tr><td>在馆：</td><td>1本</td></tr>
-						</table>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="row-fluid bookitem">
-		<div class="span12">
-			<div class="span3 bookitem-img">
-				<img class="img-polaroid img-rounded" src="@Url.Content("~/Content/bootstrap/img/glyphicons-halflings.png")" alt="封面" />
-			</div>
-			<div class="span9">
-				<a href="#">高性能网站建设指南 译著</a>
-				@*<div class="bookitem-title"><a href="#">高性能网站建设指南 译著</a></div>*@
-				<div class="row-fluid bookitem-content">
-					<div class="span9">
-						<table class="simple-table">
-							<tr><td>作者：</td><td>桑德斯</td></tr>
-							<tr><td>出版社：</td><td>电子工业出版社</td></tr>
-							<tr><td>ISBN：</td><td>N</td></tr>
-							<tr><td>图书编号：</td><td>YH-213124</td></tr>
-							<tr><td>分类：</td><td><a href="#">Web</a>, <a href="#">JS</a></td></tr>
-							<tr><td>在馆：</td><td>1本</td></tr>
-						</table>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="row-fluid bookitem">
-		<div class="span12">
-			<div class="span3 bookitem-img">
-				<img class="img-polaroid img-rounded" src="@Url.Content("~/Content/bootstrap/img/glyphicons-halflings.png")" alt="封面" />
-			</div>
-			<div class="span9">
-				<a href="#">高性能网站建设指南 译著</a>
-				@*<div class="bookitem-title"><a href="#">高性能网站建设指南 译著</a></div>*@
-				<div class="row-fluid bookitem-content">
-					<div class="span9">
-						<table class="simple-table">
-							<tr><td>作者：</td><td>桑德斯</td></tr>
-							<tr><td>出版社：</td><td>电子工业出版社</td></tr>
-							<tr><td>ISBN：</td><td>N</td></tr>
-							<tr><td>图书编号：</td><td>YH-213124</td></tr>
-							<tr><td>分类：</td><td><a href="#">Web</a>, <a href="#">JS</a></td></tr>
-							<tr><td>在馆：</td><td>1本</td></tr>
-						</table>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+		}
+		
+		@*<div class="row-fluid">
+			<button class="btn span12" id="loadMore">加载更多</button>
+		</div>*@
+	}
 </div>
